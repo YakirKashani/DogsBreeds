@@ -33,7 +33,7 @@ android {
 
 dependencies {
 
-//    implementation(project(":DogBreedsLib"))
+    implementation(project(":DogBreedsLib"))
 
     implementation(libs.appcompat)
     implementation(libs.material)
