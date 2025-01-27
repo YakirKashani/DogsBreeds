@@ -35,7 +35,7 @@ afterEvaluate() {
             create<MavenPublication>("release") {
                 groupId = "com.github.YakirKashani"
                 artifactId = "DogData"
-                version = "1.0.0"
+                version = "1.0.1"
                 artifact(tasks.getByName("bundleReleaseAar"))
                 pom {
                     withXml {
