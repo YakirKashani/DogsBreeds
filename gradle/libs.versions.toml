@@ -23,3 +23,4 @@ converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+

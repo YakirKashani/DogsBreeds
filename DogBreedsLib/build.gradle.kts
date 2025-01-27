@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    id("maven-publish")
 }
 
 android {
@@ -27,13 +28,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-/*
+
 afterEvaluate() {
     publishing {
         publications {
             create<MavenPublication>("release") {
                 groupId = "com.github.YakirKashani"
-                artifactId = "DogBreedsLib"
+                artifactId = "DogData"
                 version = "1.0.0"
                 artifact(tasks.getByName("bundleReleaseAar"))
                 pom {
@@ -59,7 +60,7 @@ afterEvaluate() {
         }
     }
 }
-*/
+
 dependencies {
 
     implementation(libs.appcompat)
