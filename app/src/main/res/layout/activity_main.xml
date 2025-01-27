@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/ActivityMain_MBTG_toggleGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        app:singleSelection="true"
+
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ActivityMain_MB_List"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/list"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+            android:layout_gravity="center"
+            app:iconTint="@color/black"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ActivityMain_MB_Grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/grid"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+            android:layout_gravity="center"
+            app:iconTint="@color/black"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"/>
+
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ActivityMain_RV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>
