@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.bumptech.glide.Glide;
 import com.example.dogbreedslib.DogData;
 import com.example.dogbreedslib.DogModel;
 
@@ -82,6 +84,7 @@ public class BottomSheetDialogFragment extends DialogFragment {
         TextView DDD_TV_Weight_max = dogDetailDialog.findViewById(R.id.DDD_TV_Weight_max);
         TextView DDD_TV_Food = dogDetailDialog.findViewById(R.id.DDD_TV_Food);
         TextView DDD_TV_Water = dogDetailDialog.findViewById(R.id.DDD_TV_Water);
+        ImageView DDD_IV_dogImage = dogDetailDialog.findViewById(R.id.DDD_IV_dogImage);
 
         DDD_TV_BreedName.setText(dogModel.getBreed_name());
         DDD_TV_Gender.setText(dogModel.getGender());
@@ -92,6 +95,7 @@ public class BottomSheetDialogFragment extends DialogFragment {
         DDD_TV_Weight_max.setText(dogModel.getAvg_weight_max());
         DDD_TV_Food.setText(dogModel.getAvg_food());
         DDD_TV_Water.setText(dogModel.getAvg_drink());
+        Glide.with(context).load(dogModel.getPic_url()).into(DDD_IV_dogImage);
 
         dogDetailDialog.show();
     }

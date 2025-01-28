@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.dogbreedslib.DogModel;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -39,6 +40,7 @@ public class DogsBreedsAdapterList extends RecyclerView.Adapter<DogsBreedsAdapte
         holder.ICL_MTV_name.setText(dogModel.getBreed_name());
         holder.ICL_MTV_age_range.setText(dogModel.getFrom_age() + " - " + dogModel.getTo_age() + " years old");
         holder.ICL_MTV_gender.setText(dogModel.getGender());
+        Glide.with(holder.itemView.getContext()).load(dogModel.getPic_url()).into(holder.ICL_IV_image);
 
         holder.itemView.setOnClickListener(view->{
             showDogDetailDialog(dogModel);
@@ -77,6 +79,7 @@ public class DogsBreedsAdapterList extends RecyclerView.Adapter<DogsBreedsAdapte
         TextView DDD_TV_Weight_max = dogDetailDialog.findViewById(R.id.DDD_TV_Weight_max);
         TextView DDD_TV_Food = dogDetailDialog.findViewById(R.id.DDD_TV_Food);
         TextView DDD_TV_Water = dogDetailDialog.findViewById(R.id.DDD_TV_Water);
+        ImageView DDD_IV_dogImage = dogDetailDialog.findViewById(R.id.DDD_IV_dogImage);
 
         DDD_TV_BreedName.setText(dogModel.getBreed_name());
         DDD_TV_Gender.setText(dogModel.getGender());
@@ -87,6 +90,7 @@ public class DogsBreedsAdapterList extends RecyclerView.Adapter<DogsBreedsAdapte
         DDD_TV_Weight_max.setText(dogModel.getAvg_weight_max());
         DDD_TV_Food.setText(dogModel.getAvg_food());
         DDD_TV_Water.setText(dogModel.getAvg_drink());
+        Glide.with(context).load(dogModel.getPic_url()).into(DDD_IV_dogImage);
 
         dogDetailDialog.show();
     }

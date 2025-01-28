@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.dogbreedslib.BreedAndUrlModel;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -41,6 +42,8 @@ public class DogsBreedsAdapterGrid extends RecyclerView.Adapter<DogsBreedsAdapte
                 callbackBreedSelectedGrid.onBreedSelected(breedAndUrlModel.getBreed_name());
             }
         });
+        Glide.with(holder.itemView.getContext()).load(breedAndUrlModel.getPic_url()).into(holder.ICG_IV_image);
+
     }
 
     @Override

@@ -33,8 +33,8 @@ android {
 
 dependencies {
 
-//    implementation(project(":DogBreedsLib"))
-    implementation("com.github.YakirKashani:DogsBreeds:1.0.1")
+    implementation(project(":DogBreedsLib"))
+//    implementation("com.github.YakirKashani:DogsBreeds:1.0.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -42,4 +42,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 }

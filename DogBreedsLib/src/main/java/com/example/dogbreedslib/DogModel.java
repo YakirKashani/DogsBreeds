@@ -14,12 +14,12 @@ public class DogModel {
     private String avg_food;
     private String created_at;
     private String updated_at;
-    private String url_pic;
+    private String pic_url;
 
     public DogModel() {
     }
 
-    public DogModel(String _id, String breed_name, String gender, String from_age, String to_age, String avg_height_min, String avg_height_max, String avg_weight_min, String avg_weight_max, String avg_drink, String avg_food, String created_at, String updated_at, String url_pic) {
+    public DogModel(String _id, String breed_name, String gender, String from_age, String to_age, String avg_height_min, String avg_height_max, String avg_weight_min, String avg_weight_max, String avg_drink, String avg_food, String created_at, String updated_at, String pic_url) {
         this._id = _id;
         this.breed_name = breed_name;
         this.gender = gender;
@@ -33,7 +33,7 @@ public class DogModel {
         this.avg_food = avg_food;
         this.created_at = created_at;
         this.updated_at = updated_at;
-        this.url_pic = url_pic;
+        this.pic_url = pic_url;
     }
 
     public String get_id() {
@@ -140,11 +140,11 @@ public class DogModel {
         this.updated_at = updated_at;
     }
 
-    public String getUrl_pic() {
-        return url_pic;
+    public String getPic_url() {
+        return pic_url;
     }
 
-    public void setUrl_pic(String url_pic) {
-        this.url_pic = url_pic;
+    public void setPic_url(String pic_url) {
+        this.pic_url = pic_url;
     }
 }

@@ -2,14 +2,14 @@ package com.example.dogbreedslib;
 
 public class BreedAndUrlModel {
     private String breed_name;
-    private String url_pic;
+    private String pic_url;
 
     public BreedAndUrlModel() {
     }
 
-    public BreedAndUrlModel(String breed_name, String url_pic) {
+    public BreedAndUrlModel(String breed_name, String pic_url) {
         this.breed_name = breed_name;
-        this.url_pic = url_pic;
+        this.pic_url = pic_url;
     }
 
     public String getBreed_name() {
@@ -20,11 +20,11 @@ public class BreedAndUrlModel {
         this.breed_name = breed_name;
     }
 
-    public String getUrl_pic() {
-        return url_pic;
+    public String getPic_url() {
+        return pic_url;
     }
 
-    public void setUrl_pic(String url_pic) {
-        this.url_pic = url_pic;
+    public void setPic_url(String pic_url) {
+        this.pic_url = pic_url;
     }
 }
