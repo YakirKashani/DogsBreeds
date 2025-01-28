@@ -70,14 +70,14 @@ The `DogModel` class contains the details of a dog breed, including:
 - `avg_food`: The average amount of food the breed consumes.
 - `created_at`: The creation date of the breed data.
 - `updated_at`: The last update date of the breed data.
-- `url_pic`: The URL to the image of the breed.
+- `pic_url`: The URL to the image of the breed. (fixed in version 1.0.2)
 
 ### BreedAndUrlModel
 
 The `BreedAndUrlModel` class contains the breed's name and its corresponding image URL:
 
 - `breed_name`: The name of the breed.
-- `url_pic`: The URL of the breed's image.
+- `pic_url`: The URL of the breed's image. (fixed in version 1.0.2)
 
 ## API
 
