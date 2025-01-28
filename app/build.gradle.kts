@@ -33,8 +33,8 @@ android {
 
 dependencies {
 
-    implementation(project(":DogBreedsLib"))
-//    implementation("com.github.YakirKashani:DogsBreeds:1.0.1")
+//    implementation(project(":DogBreedsLib"))
+    implementation("com.github.YakirKashani:DogsBreeds:1.0.2")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
