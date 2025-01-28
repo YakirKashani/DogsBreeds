@@ -7,7 +7,7 @@ This is a simple Android SDK for fetching dog breeds data from a public API. The
 To include this SDK in your Android project, add the following dependency in your `build.gradle` file:
 
 ```
-implementation("com.github.YakirKashani:DogsBreeds:1.0.1")
+implementation("com.github.YakirKashani:DogsBreeds:1.0.2")
 ```
 
 ## Usage
