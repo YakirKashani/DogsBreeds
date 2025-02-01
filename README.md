@@ -4,10 +4,26 @@ This is a simple Android SDK for fetching dog breeds data from a public API. The
 
 ## Installation
 
-To include this SDK in your Android project, add the following dependency in your `build.gradle` file:
+To include this SDK in your Android project, add the following dependencies:
+
+1. In your root `build.gradle` file at the end of the repositories:
 
 ```
-implementation("com.github.YakirKashani:DogsBreeds:1.0.2")
+dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+2. Add the dependency:
+
+```
+dependencies {
+    implementation("com.github.YakirKashani:DogsBreeds:1.0.2")
+}
 ```
 
 ## Usage
